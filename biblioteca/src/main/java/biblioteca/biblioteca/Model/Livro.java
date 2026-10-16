@@ -4,10 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Builder
 @Data
 @Table(name = "tb_livro")
-@AllArgsConstructor
 @NoArgsConstructor
 public class Livro {
 

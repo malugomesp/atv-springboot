@@ -28,11 +28,9 @@ public class LivroPostPutDto {
 
     @JsonProperty("ano")
     @NotNull(message = "ano não pode ser nulo")
-    @Positive(message = "ano deve ser positivo")
     private Integer ano;
 
     @JsonProperty("edicao")
     @NotNull(message = "edicao não pode ser nula")
-    @Positive(message = "edicao deve ser positiva")
     private Integer edicao;
 }

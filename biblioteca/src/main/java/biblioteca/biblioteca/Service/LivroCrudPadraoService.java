@@ -62,13 +62,6 @@ public class LivroCrudPadraoService implements LivroCrudService {
     @Override
     public LivroResponseDto atualizarLivro(Long id, LivroPostPutDto dto) {
         Livro livro = obterLivroExistente(id);
-
-        livroRepository.findByIsbn(dto.getIsbn())
-                .filter(outro -> !outro.getId().equals(id))
-                .ifPresent(outro -> {
-                    throw new ResponseStatusException(HttpStatus.CONFLICT, "ja existe um livro com este isbn");
-                });
-
         preencher(livro, dto);
         return paraResponse(livroRepository.save(livro));
     }

@@ -34,8 +34,6 @@ public class Autor {
     // Adicione a relação com Livro aqui
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
     @JsonProperty("livros")
     private List<Livro> livros = new ArrayList<>();
 }

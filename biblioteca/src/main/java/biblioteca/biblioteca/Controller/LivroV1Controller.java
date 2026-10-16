@@ -67,7 +67,7 @@ public class LivroV1Controller {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> removerLivro(@PathVariable Long id) {
+    public ResponseEntity<?> removerLivro(@PathVariable Long id) {
         livroCrudService.removerLivro(id);
         return ResponseEntity
                 .status(HttpStatus.NO_CONTENT)

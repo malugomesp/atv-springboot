@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.*;
 
+@Service 
 public class LivroCrudPadraoService implements LivroCrudService {
     @Autowired 
     LivroRepository livroRepository;
